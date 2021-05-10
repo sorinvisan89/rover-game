@@ -52,7 +52,7 @@ public class RoverServiceTest {
     public void given_InvalidMoveCommandsAndStartPosition_WhenExecutingCommands_ShouldThrowException() {
 
         expectedEx.expect(InvalidPositionException.class);
-        expectedEx.expectMessage("Position Position(x=-1, y=13) is not on the plateau!");
+        expectedEx.expectMessage("Position Position(x=-1, y=13) is not on the plateau Plateau (dimX=19 , dimY=19)");
 
         final String commands = "FFLFFFFFFFFFFF";
         final PositionWithHeading initialPosition = PositionWithHeading.builder()

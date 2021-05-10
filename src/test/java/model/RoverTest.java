@@ -29,7 +29,7 @@ public class RoverTest {
     public void given_IllegalForwardMove_WhenRoverMoves_ShouldThrowException() {
 
         expectedEx.expect(InvalidPositionException.class);
-        expectedEx.expectMessage("Position Position(x=3, y=20) is not on the plateau!");
+        expectedEx.expectMessage("Position Position(x=3, y=20) is not on the plateau Plateau (dimX=19 , dimY=19)!");
 
         final Position initialPosition = new Position(3, 19);
         final Rover rover = new Rover(Heading.NORTH, plateau, initialPosition);
@@ -40,7 +40,7 @@ public class RoverTest {
     public void given_IllegalBackwardsMove_WhenRoverMoves_ShouldThrowException() {
 
         expectedEx.expect(InvalidPositionException.class);
-        expectedEx.expectMessage("Position Position(x=12, y=-1) is not on the plateau!");
+        expectedEx.expectMessage("Position Position(x=12, y=-1) is not on the plateau Plateau (dimX=19 , dimY=19)!");
 
         final Position initialPosition = new Position(12, 0);
         final Rover rover = new Rover(Heading.NORTH, plateau, initialPosition);

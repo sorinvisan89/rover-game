@@ -13,7 +13,7 @@ public class InvalidPositionException extends RuntimeException {
     private final Position position;
 
     public InvalidPositionException(final Plateau plateau, final Position position) {
-        super(String.format("Position %s is not on the plateau!", position));
+        super(String.format("Position %s is not on the plateau %s!", position, plateau));
 
         this.plateau = plateau;
         this.position = position;
